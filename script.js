@@ -1,7 +1,8 @@
 'use strict';
 
-let players, playersNumber, player1, player2, drawnedCard;
+let players, playersNumber, player1, player2, drawnedCard, round;
 players = [];
+round = 0;
 
 /****************************
  *! Create deck of cards
@@ -97,13 +98,25 @@ BUTTON_NUMBER.addEventListener('click', function() {
 /**
  *!      DRAW FIRST TWO CARDS FOR ALL PLAYERS
  **/
-const PREFLOP_CARDS = 2;
 
-const BUTTON_PREFLOP = document.getElementById('button-preflop');
-BUTTON_PREFLOP.addEventListener('click', function() {
-  for (let i = 0; i < PREFLOP_CARDS; i++) {
-    for (let j = 0; j < players.length; j++) {
-      players[j].push(cardDeck.shift()); //add a single card for every player
+const BUTTON_ROUND = document.getElementById('button-round');
+
+function dealCards() {
+  if (round == 0) {
+    // PRE-FLOP, we deal two cards for every player
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < players.length; j++) {
+        players[j].push(cardDeck.shift());
+      }
     }
-  }
-});
+    round++;
+  } else if (round > 0 && round <= 3) {
+    //
+    for (let j = 0; j < players.length; j++) {
+      players[j].push(cardDeck.shift());
+    }
+    round++;
+  } else console.log('There are no more rounds');
+}
+
+BUTTON_ROUND.addEventListener('click', dealCards);
