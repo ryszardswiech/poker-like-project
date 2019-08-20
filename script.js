@@ -9,7 +9,6 @@ round = 0;
  ***************************/
 
 let cardDeck = [
-  { cardName: 'Ace', cardColor: 'Clubs', strength: 1 },
   { cardName: '2', cardColor: 'Clubs', strength: 2 },
   { cardName: '3', cardColor: 'Clubs', strength: 3 },
   { cardName: '4', cardColor: 'Clubs', strength: 4 },
@@ -22,7 +21,7 @@ let cardDeck = [
   { cardName: 'Jack', cardColor: 'Clubs', strength: 11 },
   { cardName: 'Queen', cardColor: 'Clubs', strength: 12 },
   { cardName: 'King', cardColor: 'Clubs', strength: 13 },
-  { cardName: 'Ace', cardColor: 'Diamonds', strength: 1 },
+  { cardName: 'Ace', cardColor: 'Clubs', strength: 14 },
   { cardName: '2', cardColor: 'Diamonds', strength: 2 },
   { cardName: '3', cardColor: 'Diamonds', strength: 3 },
   { cardName: '4', cardColor: 'Diamonds', strength: 4 },
@@ -35,7 +34,7 @@ let cardDeck = [
   { cardName: 'Jack', cardColor: 'Diamonds', strength: 11 },
   { cardName: 'Queen', cardColor: 'Diamonds', strength: 12 },
   { cardName: 'King', cardColor: 'Diamonds', strength: 13 },
-  { cardName: 'Ace', cardColor: 'Hearts', strength: 1 },
+  { cardName: 'Ace', cardColor: 'Diamonds', strength: 14 },
   { cardName: '2', cardColor: 'Hearts', strength: 2 },
   { cardName: '3', cardColor: 'Hearts', strength: 3 },
   { cardName: '4', cardColor: 'Hearts', strength: 4 },
@@ -48,7 +47,7 @@ let cardDeck = [
   { cardName: 'Jack', cardColor: 'Hearts', strength: 11 },
   { cardName: 'Queen', cardColor: 'Hearts', strength: 12 },
   { cardName: 'King', cardColor: 'Hearts', strength: 13 },
-  { cardName: 'Ace', cardColor: 'Spades', strength: 1 },
+  { cardName: 'Ace', cardColor: 'Hearts', strength: 14 },
   { cardName: '2', cardColor: 'Spades', strength: 2 },
   { cardName: '3', cardColor: 'Spades', strength: 3 },
   { cardName: '4', cardColor: 'Spades', strength: 4 },
@@ -60,7 +59,8 @@ let cardDeck = [
   { cardName: '10', cardColor: 'Spades', strength: 10 },
   { cardName: 'Jack', cardColor: 'Spades', strength: 11 },
   { cardName: 'Queen', cardColor: 'Spades', strength: 12 },
-  { cardName: 'King', cardColor: 'Spades', strength: 13 }
+  { cardName: 'King', cardColor: 'Spades', strength: 13 },
+  { cardName: 'Ace', cardColor: 'Spades', strength: 14 }
 ];
 
 /**
@@ -96,7 +96,7 @@ BUTTON_NUMBER.addEventListener('click', function() {
 });
 
 /**
- *!      DRAW FIRST TWO CARDS FOR ALL PLAYERS
+ *!      DRAW CARDS FOR ALL PLAYERS DURING THE GAME
  **/
 
 const BUTTON_ROUND = document.getElementById('button-round');
